@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>CSS3 animation-name属性</title>
+    <style type="text/css">
+        @-webkit-keyframes mycolor {
+            0% {
+                background-color: red;
+            }
+            30% {
+                background-color: blue;
+            }
+            60% {
+                background-color: yellow;
+            }
+            100% {
+                background-color: green;
+            }
+        }
+        
+        @-webkit-keyframes mytransform {
+            0% {
+                border-radius: 0;
+            }
+            50% {
+                border-radius: 50px;
+                transform: translateY(0);
+            }
+            100% {
+                border-radius: 50px;
+                transform: translateY(300px);
+            }
+        }
+        
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: mytransform;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            /* animation-delay: 3s; */
+            animation-iteration-count: infinite;
+            /*无限循环*/
+            /* animation-iteration-count: inherit; */
+            /* animation-iteration-count: initial; */
+            animation-direction: alternate;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
